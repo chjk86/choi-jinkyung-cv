@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>최진경 교수 | 전남대학교 조선시대 한문학</title>
+<meta name="description" content="전남대학교 조교수 최진경(Choi Jinkyung)의 연구 소개, 논문, 저역서, 칼럼 목록입니다.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#444937",
+                        "surface-container-low": "#f4f4ee",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5c614d",
+                        "on-secondary-fixed": "#191d0e",
+                        "surface-dim": "#dadad5",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#626753",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f312e",
+                        "on-primary-fixed-variant": "#2c4e3b",
+                        "primary-fixed": "#c5ecd2",
+                        "on-tertiary-container": "#b8b89f",
+                        "on-background": "#1a1c19",
+                        "tertiary-fixed": "#e5e4ca",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#474835",
+                        "primary-fixed-dim": "#a9cfb7",
+                        "primary-container": "#2d4f3c",
+                        "surface-container-high": "#e8e8e3",
+                        "secondary-container": "#e0e5cc",
+                        "on-primary-fixed": "#002112",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#484936",
+                        "background": "#fafaf4",
+                        "on-surface": "#1a1c19",
+                        "tertiary-fixed-dim": "#c8c8af",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1c1d0c",
+                        "on-surface-variant": "#424843",
+                        "on-primary-container": "#9ac0a7",
+                        "tertiary": "#313221",
+                        "surface-container": "#eeeee9",
+                        "surface-tint": "#436651",
+                        "secondary-fixed-dim": "#c4c9b1",
+                        "outline-variant": "#c1c8c1",
+                        "surface-variant": "#e3e3de",
+                        "secondary-fixed": "#e0e5cc",
+                        "outline": "#727973",
+                        "inverse-primary": "#a9cfb7",
+                        "primary": "#163826",
+                        "surface-bright": "#fafaf4",
+                        "surface": "#fafaf4",
+                        "surface-container-highest": "#e3e3de",
+                        "inverse-on-surface": "#f1f1ec",
+                        "on-error": "#ffffff",
+                        "muted-gold": "#436651"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "md": "24px",
+                        "container-max": "1120px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "body-md": ["\"Source Serif 4\""],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "body-lg": ["\"Source Serif 4\""],
+                        "label-sm": ["Public Sans"],
+                        "label-md": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fafaf4;
+            color: #1a1c19;
+        }
+        .scroll-mt-nav {
+            scroll-margin-top: 80px;
+        }
+
+        /* Scroll progress bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #436651, #a9cfb7);
+            z-index: 60;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-32px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-left.in-view {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(32px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-right.in-view {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Floating decorative blobs */
+        @keyframes blob {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(24px, -32px) scale(1.08); }
+            66% { transform: translate(-18px, 18px) scale(0.94); }
+        }
+        .animate-blob { animation: blob 14s infinite ease-in-out; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float-slow 6s ease-in-out infinite; }
+
+        /* Card lift */
+        .lift-card {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+        }
+        .lift-card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* Table row entrance */
+        tr.reveal-row {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        tr.reveal-row.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Nav link underline animation */
+        header nav a {
+            position: relative;
+            transition: color 0.25s ease;
+        }
+        header nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #163826;
+            transition: width 0.3s ease;
+        }
+        header nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Counter tiles */
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<div id="scroll-progress"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur border-b border-outline-variant">
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="font-headline-md text-headline-md text-primary">최진경 Choi Jinkyung</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md pb-1 text-primary" href="#home">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#about">Research</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#papers">Publications</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#columns">Columns</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#contact">Contact</a>
+</div>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<div class="hidden md:hidden flex-col gap-4 px-gutter pb-6 bg-surface-container-lowest" id="mobile-menu">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#home">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#about">Research</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#papers">Publications</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#columns">Columns</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#contact">Contact</a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full px-gutter max-w-container-max mx-auto py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-center overflow-hidden" id="home">
+<!-- decorative blobs -->
+<div class="absolute -top-10 -left-10 w-72 h-72 bg-primary-fixed/40 rounded-full blur-3xl animate-blob pointer-events-none"></div>
+<div class="absolute top-1/3 right-0 w-80 h-80 bg-secondary-container/50 rounded-full blur-3xl animate-blob animation-delay-2000 pointer-events-none"></div>
+<div class="absolute bottom-0 left-1/3 w-64 h-64 bg-tertiary-fixed/40 rounded-full blur-3xl animate-blob animation-delay-4000 pointer-events-none"></div>
+
+<div class="md:col-span-7 space-y-stack-lg relative z-10">
+<div class="space-y-stack-sm reveal">
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">최진경 (Choi Jinkyung)</h1>
+<p class="font-headline-md text-headline-md text-muted-gold italic">Chonnam National University Assistant Professor</p>
+</div>
+<div class="space-y-stack-md max-w-xl reveal" style="transition-delay:0.1s">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    사람과 제도, 문학의 관련성에 관심을 두고 있으며, 고전문학이 현재의 삶과 조우하는 지점을 발견하는 것을 기쁨으로 여기며 공부합니다. 조선시대 한문학 전공자로서 원전에 기초한 문헌 연구를 수행하고 있으며 디지털 인문학으로 학적 지평을 넓혀가고 있습니다.
+                </p>
+</div>
+<div class="flex gap-4 pt-4 reveal" style="transition-delay:0.2s">
+<a class="bg-primary text-on-primary px-8 py-3 font-label-md text-label-md rounded-lg hover:bg-primary/90 hover:-translate-y-0.5 transition-all shadow-sm" href="#contact">Contact Info</a>
+<a class="border border-primary text-primary px-8 py-3 font-label-md text-label-md rounded-lg hover:bg-surface-container-low hover:-translate-y-0.5 transition-all" href="#papers">View Research</a>
+</div>
+</div>
+<div class="md:col-span-5 flex justify-center md:justify-end relative z-10 reveal-right">
+<div class="relative w-full max-w-[380px] aspect-[4/5] animate-float">
+<div class="absolute inset-0 rounded-xl bg-primary/10 translate-x-4 translate-y-4"></div>
+<div class="relative w-full h-full rounded-xl overflow-hidden shadow-lg border border-outline-variant bg-surface-container-lowest">
+<img alt="최진경 교수 프로필 사진" class="w-full h-full object-cover" src="images/profile.png">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Stats strip -->
+<section class="w-full px-gutter max-w-container-max mx-auto pb-16">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal">
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="stat-number font-display-lg text-headline-lg text-primary" data-count="15">0</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">연구논문</p>
+</div>
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="stat-number font-display-lg text-headline-lg text-primary" data-count="4">0</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">칼럼·기고</p>
+</div>
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="stat-number font-display-lg text-headline-lg text-primary" data-count="5">0</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">관심분야</p>
+</div>
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="stat-number font-display-lg text-headline-lg text-primary" data-count="12">0</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">연구활동 기간(년)</p>
+</div>
+</div>
+</section>
+
+<!-- About & Research Interests -->
+<section class="py-section-gap w-full px-gutter max-w-container-max mx-auto scroll-mt-nav border-t border-outline-variant" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 order-2 md:order-1 reveal-left">
+<div class="rounded-xl overflow-hidden border border-outline-variant shadow-sm bg-surface-container-lowest lift-card hover:shadow-xl">
+<img alt="계회도(契會圖)" class="w-full h-full object-cover" src="images/gyehoedo.png">
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 space-y-stack-md reveal-right">
+<h2 class="font-headline-lg text-headline-lg text-primary">연구 소개</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    사람과 제도, 문학의 관련성에 관심을 두고 있으며, 고전문학이 현재의 삶과 조우하는 지점을 발견하는 것을 기쁨으로 여기며 공부하고 있습니다.
+                </p>
+<div>
+<span class="font-label-sm text-label-sm text-muted-gold uppercase block mb-3">관심분야 / Research Interests</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors cursor-default">한시</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors cursor-default">조선 전기</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors cursor-default">계회</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors cursor-default">디지털 인문학</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors cursor-default">승려 문집</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Academic Career -->
+<section class="py-section-gap w-full px-gutter max-w-container-max mx-auto scroll-mt-nav">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4 reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary">학력 및 경력</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Academic Career &amp; Positions</p>
+</div>
+<div class="md:col-span-8 space-y-12">
+<div class="flex gap-6 items-start reveal">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-muted-gold uppercase block mb-1">Education</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-1">동국대학교 문학박사</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">박사 논문:『조선시대 관청계회문학 연구』</p>
+</div>
+</div>
+<div class="flex gap-6 items-start reveal" style="transition-delay:0.1s">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-muted-gold uppercase block mb-1">Current Position</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-1">전남대학교 조교수</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">조선시대 한문학 전공</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Research Papers -->
+<section class="py-section-gap bg-surface-container-low scroll-mt-nav border-y border-outline-variant" id="papers">
+<div class="w-full px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12 reveal">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">연구논문</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Publications (KCI Indexed)</p>
+</div>
+<div class="text-right hidden md:block">
+<p class="font-label-sm text-label-sm text-primary font-bold">Total: 15 Papers</p>
+</div>
+</div>
+<div class="overflow-x-auto rounded-xl border border-outline-variant bg-surface-container-lowest shadow-sm reveal">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-surface-container text-left border-b border-outline-variant">
+<th class="py-4 px-6 font-label-md text-label-md text-primary w-24">발행일</th>
+<th class="py-4 px-6 font-label-md text-label-md text-primary">논문 제목</th>
+<th class="py-4 px-6 font-label-md text-label-md text-primary w-48">학술지</th>
+<th class="py-4 px-6 font-label-md text-label-md text-primary w-48 text-right">발행기관</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant" id="papers-tbody">
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2026.04</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">승려의 죽음을 기억하는 방식: 조선시대 승려 행장의 서사 구조와 죽음의 물질화</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">한국문학연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">한국문학연구소</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2025.04</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">조선시대 승려문집의 시맨틱 데이터 아카이브 구축과 분석-『풍계집』의 한시를 중심으로</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">남도문화연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">남도문화연구소</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2025.04</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">한시로 읽는 아버지의 마음: 서거정(徐居正)의 서복경(徐福慶) 소재 한시에 드러난 아들 형상과 그 의미</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">용봉인문논총</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">인문학연구소</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2025.03</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">네트워크 분석을 통해 본 조선시대 승려문집의 한시 차용과 상호텍스트성-풍계 명찰(楓溪明察)의 『풍계집(楓溪集)』을 중심으로-</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">국제어문</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">국제어문학회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2025.03</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">15~16세기 사헌부 계회시(契會詩)와 「상대별곡(霜臺別曲)」의 상보성 연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">동방한문학</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">동방한문학회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2025.02</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">15세기 사대부 네트워크 속 '승려'의 위상-일암학전(一菴學專) 관련 문헌 기록을 중심으로-</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">열상고전연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">열상고전연구회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2024.12</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">집단적 관료의식의 문예적 발현: 承政院 契會를 중심으로</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">漢文學報</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">우리한문학회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2024.12</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">병자호란을 '이야기'하는 두 가지 방식—이긍익의 『연려실기술』과 박종화의 『대춘부』(1937)를 중심으로—</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">대동한문학(大東漢文學)</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">대동한문학회 (구. 교남한문학회)</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2024.10</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">1664년 김수항(金壽恒)의 칠보산(七寶山) 유람과 『북관수창록(北關酬唱錄)』</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">온지논총</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">온지학회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2024.08</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">한국 한시 데이터 아카이브 구축을 위한 개념적 데이터 모델링 시론</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">민족문학사연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">민족문학사연구소</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2023.04</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">17세기 승려 풍계 명찰(楓溪明察)의 시세계 연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">한국문학연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">한국문학연구소</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2021.04</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">조선시대 사헌부 계회의 문학적 재현 양상과 그 의미</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">민족문학사연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">민족문학사연구소</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2020.10</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">15세기 관료 문인의 '한양' 이미지-「한도십영(漢都十詠)」 및 그 차운시 분석을 중심으로-</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">열상고전연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">열상고전연구회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2016</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">正祖時代 '復讐殺人'의 양상과 그 의미: 『추관지』 復讐殺人 판례를 중심으로</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">漢文學報</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">우리한문학회</td>
+</tr>
+<tr class="reveal-row hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">2014.02</td>
+<td class="py-5 px-6 font-body-md text-body-md text-primary leading-snug">林悌의 「靑燈論史」연구-「杯棊論」・「烏江賦」에 드러난 '項羽' 형상을 중심으로</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant">한민족문화연구</td>
+<td class="py-5 px-6 font-body-md text-body-md text-on-surface-variant text-right">한민족문화학회</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- Columns Section -->
+<section class="py-section-gap w-full px-gutter max-w-container-max mx-auto scroll-mt-nav" id="columns">
+<div class="mb-12 reveal">
+<h2 class="font-headline-lg text-headline-lg text-primary">칼럼 및 외부 기고</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Columns &amp; Webzines</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Column 1 -->
+<a href="https://story.ugyo.net/front/webzine/wzinSub.do?wzinCode=1006&subCode=202505" target="_blank" rel="noopener noreferrer" class="reveal lift-card flex flex-col border border-outline-variant rounded-xl overflow-hidden group h-full bg-surface-container-lowest hover:shadow-xl duration-300">
+<article class="flex flex-col h-full">
+<div class="aspect-video bg-surface-container overflow-hidden"><img src="images/gyehoedo.png" alt="계회도" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+<div class="p-stack-md flex flex-col flex-grow">
+<span class="font-label-sm text-label-sm text-primary mb-2">한국국학진흥원 웹진 담談 135호</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md flex-grow">조선시대 계회에서 광장의 응원봉까지: '우리'를 만드는 연대의 말들</h3>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">2025.05</span>
+<span class="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"><span class="material-symbols-outlined">arrow_outward</span></span>
+</div>
+</div>
+</article>
+</a>
+<!-- Column 2 -->
+<a href="https://www.ibulgyo.com/news/articleView.html?idxno=421244" target="_blank" rel="noopener noreferrer" class="reveal lift-card flex flex-col border border-outline-variant rounded-xl overflow-hidden group h-full bg-surface-container-lowest hover:shadow-xl duration-300" style="transition-delay:0.05s">
+<article class="flex flex-col h-full">
+<div class="aspect-video bg-surface-container overflow-hidden"><img src="images/hwaamsa.png" alt="완주 화암사" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+<div class="p-stack-md flex flex-col flex-grow">
+<span class="font-label-sm text-label-sm text-primary mb-2">불교신문</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md flex-grow">바위 위로 피어난 한 송이 꽃, 완주 화암사</h3>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">2024.12.13</span>
+<span class="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"><span class="material-symbols-outlined">arrow_outward</span></span>
+</div>
+</div>
+</article>
+</a>
+<!-- Column 3 -->
+<a href="https://www.ibulgyo.com/news/articleView.html?idxno=417921" target="_blank" rel="noopener noreferrer" class="reveal lift-card flex flex-col border border-outline-variant rounded-xl overflow-hidden group h-full bg-surface-container-lowest hover:shadow-xl duration-300" style="transition-delay:0.1s">
+<article class="flex flex-col h-full">
+<div class="aspect-video bg-surface-container overflow-hidden"><img src="images/heungdeoksa-map.png" alt="서울 흥덕사 옛 지도" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+<div class="p-stack-md flex flex-col flex-grow">
+<span class="font-label-sm text-label-sm text-primary mb-2">불교신문</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md flex-grow">연꽃 향 위로 맺은 인연의 공간, 서울 흥덕사</h3>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">2024.09.01</span>
+<span class="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"><span class="material-symbols-outlined">arrow_outward</span></span>
+</div>
+</div>
+</article>
+</a>
+<!-- Column 4 -->
+<a href="https://story.ugyo.net/front/webzine/wzinSub.do?wzinCode=1007&subCode=202405" target="_blank" rel="noopener noreferrer" class="reveal lift-card flex flex-col border border-outline-variant rounded-xl overflow-hidden group h-full bg-surface-container-lowest hover:shadow-xl duration-300" style="transition-delay:0.15s">
+<article class="flex flex-col h-full">
+<div class="aspect-video bg-surface-container overflow-hidden"><img src="images/column4.png" alt="죽은 자의 안식처, 산 자의 소원 상자" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"></div>
+<div class="p-stack-md flex flex-col flex-grow">
+<span class="font-label-sm text-label-sm text-primary mb-2">한국국학진흥원 웹진 담談 123호</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md flex-grow">죽은 자의 안식처, 산 자의 소원 상자</h3>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">2024.05</span>
+<span class="text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"><span class="material-symbols-outlined">arrow_outward</span></span>
+</div>
+</div>
+</article>
+</a>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-section-gap bg-primary text-on-primary scroll-mt-nav" id="contact">
+<div class="w-full px-gutter max-w-container-max mx-auto text-center space-y-stack-lg reveal">
+<div class="max-w-2xl mx-auto space-y-stack-sm">
+<h2 class="font-headline-lg text-headline-lg">연구 협업 및 연락처</h2>
+<p class="font-body-lg text-body-lg opacity-80">학문적 교류 및 연구 관련 문의는 아래 연락처로 부탁드립니다.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-center gap-12 pt-8">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-primary-fixed" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-label-md text-label-md uppercase tracking-widest opacity-60">Email</span>
+<a class="font-headline-md text-headline-md hover:text-primary-fixed-dim transition-colors" href="mailto:chjk86@jnu.ac.kr">chjk86@jnu.ac.kr</a>
+</div>
+<div class="w-px bg-on-primary opacity-10 hidden md:block"></div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-primary-fixed" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="font-label-md text-label-md uppercase tracking-widest opacity-60">Office</span>
+<span class="font-headline-md text-headline-md">062-530-3141</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-gutter py-stack-lg max-w-container-max mx-auto">
+<div class="mb-stack-md md:mb-0">
+<div class="font-headline-md text-headline-md text-primary">최진경 Choi Jinkyung</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Classical Chinese Literature &amp; Digital Humanities.</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-stack-sm">
+<div class="flex gap-6 mb-2">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:chjk86@jnu.ac.kr">Email</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">© 2026 Choi Jinkyung. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+    });
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('scroll-progress');
+    function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress);
+    updateProgress();
+
+    // Smooth highlighting for nav
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('header nav a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('text-primary');
+            link.classList.add('text-on-surface-variant');
+            if (link.getAttribute('href').slice(1) === current) {
+                link.classList.add('text-primary');
+                link.classList.remove('text-on-surface-variant');
+            }
+        });
+    });
+
+    // Scroll reveal via IntersectionObserver
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-row');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Staggered delay for table rows
+    document.querySelectorAll('#papers-tbody tr.reveal-row').forEach((row, i) => {
+        row.style.transitionDelay = Math.min(i * 0.05, 0.6) + 's';
+    });
+
+    // Animated stat counters
+    const counters = document.querySelectorAll('.stat-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-count'), 10);
+            const duration = 1200;
+            const startTime = performance.now();
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+            counterObserver.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+</script>
+</body>
+</html>
