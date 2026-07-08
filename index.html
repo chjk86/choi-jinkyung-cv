@@ -5,6 +5,15 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>최진경 교수 | 전남대학교 조선시대 한문학</title>
 <meta name="description" content="전남대학교 조교수 최진경(Choi Jinkyung)의 연구 소개, 논문, 저역서, 칼럼 목록입니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="최진경 교수 | 전남대학교 조선시대 한문학">
+<meta property="og:description" content="전남대학교 조교수 최진경(Choi Jinkyung)의 연구 소개, 논문, 저역서, 칼럼 목록입니다.">
+<meta property="og:image" content="https://chjk86.github.io/choi-jinkyung-cv/og-image.png">
+<meta property="og:url" content="https://chjk86.github.io/choi-jinkyung-cv/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="최진경 교수 | 전남대학교 조선시대 한문학">
+<meta name="twitter:description" content="전남대학교 조교수 최진경(Choi Jinkyung)의 연구 소개, 논문, 저역서, 칼럼 목록입니다.">
+<meta name="twitter:image" content="https://chjk86.github.io/choi-jinkyung-cv/og-image.png">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -462,7 +471,8 @@
 <p class="font-label-sm text-label-sm text-primary font-bold">Total: 15 Papers</p>
 </div>
 </div>
-<div class="overflow-x-auto rounded-xl border border-outline-variant bg-surface-container-lowest shadow-sm reveal">
+<p class="md:hidden font-label-sm text-label-sm text-on-surface-variant mb-2">← 옆으로 스크롤해서 전체 내용을 볼 수 있어요 →</p>
+<div class="overflow-x-auto rounded-xl border border-outline-variant bg-surface-container-lowest shadow-sm reveal" id="papers-scroll">
 <table class="w-full min-w-[720px] border-collapse">
 <thead>
 <tr class="bg-surface-container text-left border-b border-outline-variant">
@@ -568,7 +578,7 @@
 </div>
 <div class="mt-8 flex justify-center reveal">
 <button id="toggle-papers" class="flex items-center gap-2 font-label-md text-label-md text-primary hover:text-primary/70 transition-colors" data-expanded="false">
-<span id="toggle-papers-text">나머지 10편 더 보기</span>
+<span id="toggle-papers-text">더보기</span>
 <span class="material-symbols-outlined transition-transform" id="toggle-papers-icon">expand_more</span>
 </button>
 </div>
@@ -747,9 +757,21 @@
             const expanded = togglePapersBtn.getAttribute('data-expanded') === 'true';
             extraPaperRows.forEach(r => r.classList.toggle('hidden'));
             togglePapersBtn.setAttribute('data-expanded', String(!expanded));
-            document.getElementById('toggle-papers-text').textContent = expanded ? '나머지 10편 더 보기' : '접기';
+            document.getElementById('toggle-papers-text').textContent = expanded ? '더보기' : '접기';
             document.getElementById('toggle-papers-icon').style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
         });
+    }
+
+    // Let mouse wheel scroll the papers table sideways when the table is wider than the screen
+    const papersScroll = document.getElementById('papers-scroll');
+    if (papersScroll) {
+        papersScroll.addEventListener('wheel', (e) => {
+            const canScrollX = papersScroll.scrollWidth > papersScroll.clientWidth;
+            if (canScrollX && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                papersScroll.scrollLeft += e.deltaY;
+                e.preventDefault();
+            }
+        }, { passive: false });
     }
 
     // Animated stat counters
