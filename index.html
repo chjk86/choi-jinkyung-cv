@@ -116,7 +116,12 @@
             color: #1a1c19;
         }
         .scroll-mt-nav {
-            scroll-margin-top: 80px;
+            scroll-margin-top: 64px;
+        }
+        @media (min-width: 768px) {
+            .scroll-mt-nav {
+                scroll-margin-top: 80px;
+            }
         }
 
         /* Scroll progress bar */
@@ -219,14 +224,17 @@
         .stat-number {
             font-variant-numeric: tabular-nums;
         }
+        .portrait-photo {
+            filter: saturate(0.88) contrast(1.03) sepia(0.08) hue-rotate(-6deg) brightness(1.02);
+        }
     </style>
 </head>
 <body class="font-body-md text-body-md overflow-x-hidden">
 <div id="scroll-progress"></div>
 <!-- TopNavBar -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur border-b border-outline-variant">
-<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
-<div class="font-headline-md text-headline-md text-primary">최진경 Choi Jinkyung</div>
+<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16 md:h-20">
+<div class="font-headline-md text-base sm:text-lg md:text-headline-md text-primary whitespace-nowrap">최진경 Choi Jinkyung</div>
 <div class="hidden md:flex gap-8 items-center">
 <a class="font-label-md text-label-md pb-1 text-primary" href="#home">Home</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#about">Research</a>
@@ -246,7 +254,7 @@
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#contact">Contact</a>
 </div>
 </header>
-<main class="pt-20">
+<main class="pt-16 md:pt-20">
 <!-- Hero Section -->
 <section class="relative w-full px-gutter max-w-container-max mx-auto py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-center overflow-hidden" id="home">
 <!-- decorative blobs -->
@@ -256,7 +264,7 @@
 
 <div class="md:col-span-7 space-y-stack-lg relative z-10">
 <div class="space-y-stack-sm reveal">
-<h1 class="font-display-lg text-display-lg text-primary leading-tight">최진경 (Choi Jinkyung)</h1>
+<h1 class="font-display-lg text-4xl sm:text-5xl md:text-display-lg text-primary leading-tight">최진경 (Choi Jinkyung)</h1>
 <p class="font-headline-md text-headline-md text-muted-gold italic">Chonnam National University Assistant Professor</p>
 </div>
 <div class="space-y-stack-md max-w-xl reveal" style="transition-delay:0.1s">
@@ -273,7 +281,9 @@
 <div class="relative w-full max-w-[380px] aspect-[4/5] animate-float">
 <div class="absolute inset-0 rounded-xl bg-primary/10 translate-x-4 translate-y-4"></div>
 <div class="relative w-full h-full rounded-xl overflow-hidden shadow-lg border border-outline-variant bg-surface-container-lowest">
-<img alt="최진경 교수 프로필 사진" class="w-full h-full object-cover" src="image(4).png">
+<img alt="최진경 교수 프로필 사진" class="portrait-photo w-full h-full object-cover" src="image(4).png">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/25 via-transparent to-primary/5 mix-blend-multiply pointer-events-none"></div>
+<div class="absolute inset-0 pointer-events-none" style="box-shadow: inset 0 0 60px 12px rgba(22,56,38,0.18);"></div>
 </div>
 </div>
 </div>
@@ -281,16 +291,16 @@
 
 <!-- Stats strip -->
 <section class="w-full px-gutter max-w-container-max mx-auto pb-16">
-<div class="grid grid-cols-3 gap-4 md:gap-6 reveal">
-<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 reveal">
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-3 sm:p-6 text-center shadow-sm">
 <div class="stat-number font-display-lg text-headline-lg text-primary" data-count="15">0</div>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">연구논문</p>
 </div>
-<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-3 sm:p-6 text-center shadow-sm">
 <div class="stat-number font-display-lg text-headline-lg text-primary" data-count="4">0</div>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">칼럼·기고</p>
 </div>
-<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-6 text-center shadow-sm">
+<div class="lift-card bg-surface-container-lowest border border-outline-variant rounded-xl p-3 sm:p-6 text-center shadow-sm">
 <div class="stat-number font-display-lg text-headline-lg text-primary" data-count="5">0</div>
 <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">관심분야</p>
 </div>
@@ -453,7 +463,7 @@
 </div>
 </div>
 <div class="overflow-x-auto rounded-xl border border-outline-variant bg-surface-container-lowest shadow-sm reveal">
-<table class="w-full border-collapse">
+<table class="w-full min-w-[720px] border-collapse">
 <thead>
 <tr class="bg-surface-container text-left border-b border-outline-variant">
 <th class="py-4 px-6 font-label-md text-label-md text-primary w-24">발행일</th>
@@ -635,7 +645,7 @@
 <section class="py-section-gap bg-primary text-on-primary scroll-mt-nav" id="contact">
 <div class="w-full px-gutter max-w-container-max mx-auto text-center space-y-stack-lg reveal">
 <div class="max-w-2xl mx-auto space-y-stack-sm">
-<h2 class="font-headline-lg text-headline-lg">연구 협업 및 연락처</h2>
+<h2 class="font-headline-lg text-headline-lg">협업 및 연락처</h2>
 <p class="font-body-lg text-body-lg opacity-80">학문적 교류 및 연구 관련 문의는 아래 연락처로 부탁드립니다.</p>
 </div>
 <div class="flex flex-col md:flex-row justify-center gap-12 pt-8">
@@ -659,11 +669,11 @@
 <div class="flex flex-col md:flex-row justify-between items-center w-full px-gutter py-stack-lg max-w-container-max mx-auto">
 <div class="mb-stack-md md:mb-0">
 <div class="font-headline-md text-headline-md text-primary">최진경 Choi Jinkyung</div>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Classical Chinese Literature &amp; Digital Humanities.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Classical Korea Literature &amp; Digital Humanities.</p>
 </div>
 <div class="flex flex-col items-center md:items-end gap-stack-sm">
 <div class="flex gap-6 mb-2">
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:chjk86@jnu.ac.kr">Email</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:chjk86@jnu.ac.kr">chjk86@jnu.ac.kr</a>
 </div>
 <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">© 2026 Choi Jinkyung. All rights reserved.</p>
 </div>
